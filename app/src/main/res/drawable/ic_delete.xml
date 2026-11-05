@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pylive Music — icône dessinée pour ce projet (aucune ressource tierce). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="#FF000000"
+>
+    <path
+        android:pathData="M4.80,7.00 L19.20,7.00 M9.60,7.00 L9.60,4.60 L14.40,4.60 L14.40,7.00 M6.60,7.00 L7.50,18.60 C7.60,19.50,8.30,20.20,9.20,20.20 L14.80,20.20 C15.70,20.20,16.40,19.50,16.50,18.60 L17.40,7.00 M10.60,10.80 L10.90,16.40 M13.40,10.80 L13.10,16.40"
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF1A1018"
+        android:strokeWidth="2.0"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

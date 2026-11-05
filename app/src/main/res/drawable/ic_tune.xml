@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pylive Music — icône dessinée pour ce projet (aucune ressource tierce). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="#FF000000"
+>
+    <path
+        android:pathData="M4.60,7.40 L19.40,7.40 M4.60,12.00 L19.40,12.00 M4.60,16.60 L19.40,16.60"
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#FF1A1018"
+        android:strokeWidth="2.0"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M7.10,7.40 C7.10,6.35,7.95,5.50,9.00,5.50 C10.05,5.50,10.90,6.35,10.90,7.40 C10.90,8.45,10.05,9.30,9.00,9.30 C7.95,9.30,7.10,8.45,7.10,7.40 Z M13.10,12.00 C13.10,10.95,13.95,10.10,15.00,10.10 C16.05,10.10,16.90,10.95,16.90,12.00 C16.90,13.05,16.05,13.90,15.00,13.90 C13.95,13.90,13.10,13.05,13.10,12.00 Z M5.70,16.60 C5.70,15.55,6.55,14.70,7.60,14.70 C8.65,14.70,9.50,15.55,9.50,16.60 C9.50,17.65,8.65,18.50,7.60,18.50 C6.55,18.50,5.70,17.65,5.70,16.60 Z"
+        android:fillColor="#FF1A1018" />
+</vector>
