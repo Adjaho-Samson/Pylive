@@ -22,15 +22,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
 
-      - uses: android-actions/setup-android@v3
-
-      - name: Installer le SDK requis
-        run: sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+      - name: Installer le SDK Android requis
+        run: |
+          # Le runner ubuntu-latest fournit déjà le SDK et les cmdline-tools ;
+          # on ajoute uniquement la plateforme et les build-tools nécessaires.
+          SDK="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/usr/local/lib/android/sdk}}"
+          echo "ANDROID_SDK_ROOT=$SDK" >> "$GITHUB_ENV"
+          echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
+          MANAGER="$SDK/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "$MANAGER" ]; then MANAGER="$(command -v sdkmanager)"; fi
+          echo "sdkmanager: $MANAGER"
+          yes | "$MANAGER" --licenses > /dev/null 2>&1 || true
+          "$MANAGER" --install "platforms;android-35" "build-tools;35.0.0" "platform-tools"
 
       - uses: gradle/actions/setup-gradle@v4
 
@@ -88,10 +96,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
+
+      - name: Installer le SDK Android requis
+        run: |
+          SDK="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/usr/local/lib/android/sdk}}"
+          echo "ANDROID_SDK_ROOT=$SDK" >> "$GITHUB_ENV"
+          echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
+          MANAGER="$SDK/cmdline-tools/latest/bin/sdkmanager"
+          if [ ! -x "$MANAGER" ]; then MANAGER="$(command -v sdkmanager)"; fi
+          yes | "$MANAGER" --licenses > /dev/null 2>&1 || true
+          "$MANAGER" --install "platforms;android-33" "build-tools;33.0.2" "platform-tools" "emulator"
 
       - uses: gradle/actions/setup-gradle@v4
 
