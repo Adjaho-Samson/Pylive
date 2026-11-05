@@ -1,9 +1,10 @@
 name: Page de téléchargement
 
 # Publie docs/site sur GitHub Pages à chaque évolution de la page.
+# Sur une branche de travail, la publication échoue tant que Pages n'est pas
+# activé sur main : le job est donc informatif hors de main.
 on:
   push:
-    branches: [main]
     paths:
       - "docs/site/**"
       - ".github/workflows/pages.yml"
@@ -29,6 +30,10 @@ jobs:
       - uses: actions/checkout@v4
 
       - uses: actions/configure-pages@v5
+        with:
+          # Le jeton de l'intégration ne peut pas créer le site Pages via l'API :
+          # cette option laisse l'action activer Pages automatiquement au premier passage.
+          enablement: true
 
       - uses: actions/upload-pages-artifact@v3
         with:
