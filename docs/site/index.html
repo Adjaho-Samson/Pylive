@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pylive Music — Télécharger l'application</title>
+<meta name="description" content="Pylive Music : lecteur de musique local pour Android. Aucun compte, aucune publicité, aucune connexion Internet. Téléchargez l'APK gratuitement.">
+<meta name="theme-color" content="#B80DB8">
+<link rel="icon" href="icone-192.png">
+<link rel="apple-touch-icon" href="icone-192.png">
+<meta property="og:title" content="Pylive Music — Télécharger l'application">
+<meta property="og:description" content="Votre musique, rien qu'à vous. Hors ligne, sans compte et sans publicité.">
+<meta property="og:image" content="icone-512.png">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --violet: #B80DB8;
+    --violet-presse: #930A93;
+    --violet-profond: #6E0A6E;
+    --jaune: #F5D328;
+    --encre: #1A1018;
+    --encre-douce: #5C4E5E;
+    --violet-clair: #F7E3F7;
+    --contour: #E6DAE8;
+    --blanc: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--blanc);
+    color: var(--encre);
+    font-family: Roboto, "Helvetica Neue", Arial, system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .bandeau {
+    background: var(--violet);
+    color: var(--blanc);
+    padding: 40px 24px 44px;
+    text-align: center;
+  }
+
+  .bandeau img {
+    width: 104px;
+    height: 104px;
+    border-radius: 24px;
+    background: var(--blanc);
+    padding: 6px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  h1 {
+    font-size: 40px;
+    line-height: 1.15;
+    margin: 0 0 12px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  .sous-titre {
+    font-size: 20px;
+    margin: 0;
+    color: #FFFFFF;
+    opacity: 0.95;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 24px 64px;
+  }
+
+  .carte {
+    background: var(--blanc);
+    border: 1px solid var(--contour);
+    border-radius: 20px;
+    padding: 28px 24px;
+    margin-top: -26px;
+    box-shadow: 0 8px 28px rgba(110, 10, 110, 0.10);
+    position: relative;
+  }
+
+  .bouton {
+    display: block;
+    width: 100%;
+    background: var(--violet);
+    color: var(--blanc);
+    text-decoration: none;
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+    padding: 20px 16px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s ease;
+  }
+
+  .bouton:hover, .bouton:focus { background: var(--violet-presse); }
+
+  .bouton:focus-visible {
+    outline: 3px solid var(--jaune);
+    outline-offset: 3px;
+  }
+
+  .details-bouton {
+    text-align: center;
+    color: var(--encre-douce);
+    font-size: 16px;
+    margin: 12px 0 0;
+  }
+
+  h2 {
+    font-size: 25px;
+    margin: 40px 0 12px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  h2::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 22px;
+    background: var(--jaune);
+    border-radius: 3px;
+    margin-right: 12px;
+    vertical-align: -2px;
+  }
+
+  ol, ul { padding-left: 22px; margin: 0 0 8px; }
+
+  li { margin-bottom: 10px; }
+
+  .etape {
+    font-weight: 700;
+    color: var(--violet-profond);
+  }
+
+  .note {
+    background: var(--violet-clair);
+    border-left: 6px solid var(--violet);
+    border-radius: 0 12px 12px 0;
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-size: 17px;
+    color: var(--encre);
+  }
+
+  .note strong { color: var(--violet-profond); }
+
+  .grille {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 14px;
+    margin-top: 8px;
+  }
+
+  .atout {
+    border: 1px solid var(--contour);
+    border-radius: 14px;
+    padding: 16px 18px;
+    background: var(--blanc);
+  }
+
+  .atout .titre {
+    display: block;
+    font-weight: 700;
+    color: var(--violet-profond);
+    margin-bottom: 4px;
+    font-size: 17px;
+  }
+
+  .atout p {
+    margin: 0;
+    font-size: 16px;
+    color: var(--encre-douce);
+    line-height: 1.5;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--contour);
+  }
+
+  th {
+    color: var(--encre-douce);
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+
+  td:first-child { font-weight: 700; width: 42%; }
+
+  .qr {
+    text-align: center;
+    margin-top: 36px;
+    padding-top: 32px;
+    border-top: 1px solid var(--contour);
+  }
+
+  .qr img {
+    width: 216px;
+    height: 216px;
+    max-width: 100%;
+    border: 1px solid var(--contour);
+    border-radius: 14px;
+    padding: 10px;
+    background: var(--blanc);
+  }
+
+  .qr p {
+    color: var(--encre-douce);
+    font-size: 17px;
+    margin: 14px 0 0;
+  }
+
+  .lien-copie {
+    display: flex;
+    gap: 8px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+  }
+
+  .lien-copie input {
+    flex: 1 1 260px;
+    min-width: 0;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--encre);
+    padding: 14px 12px;
+    border: 1px solid var(--contour);
+    border-radius: 12px;
+    background: var(--blanc);
+  }
+
+  .lien-copie button {
+    flex: 0 0 auto;
+    background: var(--violet);
+    color: var(--blanc);
+    border: none;
+    border-radius: 12px;
+    padding: 14px 22px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .lien-copie button:hover { background: var(--violet-presse); }
+
+  .statut-copie {
+    font-size: 15px;
+    color: var(--violet-profond);
+    font-weight: 700;
+    min-height: 22px;
+    margin-top: 8px;
+  }
+
+  footer {
+    border-top: 1px solid var(--contour);
+    margin-top: 48px;
+    padding: 24px;
+    text-align: center;
+    color: var(--encre-douce);
+    font-size: 16px;
+  }
+
+  footer a { color: var(--violet-profond); }
+
+  @media (max-width: 480px) {
+    body { font-size: 17px; }
+    h1 { font-size: 31px; }
+    .sous-titre { font-size: 18px; }
+    h2 { font-size: 22px; }
+    .bandeau { padding: 32px 18px 40px; }
+    main { padding: 0 16px 48px; }
+    .carte { padding: 22px 18px; }
+    .bouton { font-size: 19px; padding: 18px 12px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="bandeau">
+  <img src="icone-512.png" alt="Icône de l'application Pylive Music">
+  <h1>Pylive Music</h1>
+  <p class="sous-titre">Votre musique, rien qu'à vous. Hors ligne, sans compte et sans publicité.</p>
+</header>
+
+<main>
+  <section class="carte">
+    <a class="bouton" href="https://github.com/Adjaho-Samson/Pylive/releases/latest/download/pylive-music.apk" id="telecharger">
+      Télécharger l'application (APK)
+    </a>
+    <p class="details-bouton">Version 1.0 · 15 Mo · Android 8.0 et plus récent</p>
+  </section>
+
+  <div class="note">
+    <strong>À savoir avant d'installer :</strong> l'application ne vient pas du Play Store,
+    Android affichera donc un avertissement. C'est normal et sans danger, les étapes ci-dessous
+    expliquent quoi faire.
+  </div>
+
+  <h2>Comment l'installer sur le téléphone</h2>
+  <ol>
+    <li><span class="etape">Téléchargez le fichier</span> en appuyant sur le bouton violet ci-dessus, directement depuis le téléphone.</li>
+    <li><span class="etape">Ouvrez les notifications</span> et touchez le fichier téléchargé (son nom se termine par <em>.apk</em>).</li>
+    <li><span class="etape">Autorisez l'installation</span> : Android propose « Paramètres », activez alors « Autoriser depuis cette source », puis revenez en arrière.</li>
+    <li><span class="etape">Touchez « Installer »</span>, puis « Ouvrir ». L'application apparaît ensuite dans vos applications comme les autres.</li>
+  </ol>
+
+  <h2>Ce que fait l'application</h2>
+  <div class="grille">
+    <div class="atout">
+      <span class="titre">Trouve votre musique</span>
+      <p>Détecte automatiquement les fichiers audio du téléphone, sans rien importer à la main.</p>
+    </div>
+    <div class="atout">
+      <span class="titre">Bibliothèque complète</span>
+      <p>Morceaux, albums, artistes, dossiers, favoris, historique et playlists personnelles.</p>
+    </div>
+    <div class="atout">
+      <span class="titre">Lecture complète</span>
+      <p>Lecture, pause, morceau suivant ou précédent, avance dans le morceau, aléatoire et répétition.</p>
+    </div>
+    <div class="atout">
+      <span class="titre">Fonctionne hors ligne</span>
+      <p>Aucune connexion Internet n'est nécessaire, ni même demandée par l'application.</p>
+    </div>
+    <div class="atout">
+      <span class="titre">En arrière-plan</span>
+      <p>La musique continue quand vous changez d'application, avec les commandes sur l'écran verrouillé.</p>
+    </div>
+    <div class="atout">
+      <span class="titre">Respect de la vie privée</span>
+      <p>Aucun compte, aucune publicité, aucune mesure d'audience, aucun envoi de données.</p>
+    </div>
+  </div>
+
+  <h2>Détails techniques</h2>
+  <table>
+    <tr><th>Information</th><th>Valeur</th></tr>
+    <tr><td>Nom</td><td>Pylive Music</td></tr>
+    <tr><td>Version</td><td>1.0 (APK de test signé)</td></tr>
+    <tr><td>Android requis</td><td>8.0 (API 26) ou plus récent</td></tr>
+    <tr><td>Taille du fichier</td><td>15 Mo</td></tr>
+    <tr><td>Identifiant</td><td>com.pylive.music</td></tr>
+    <tr><td>Permissions</td><td>Accès à l'audio et notifications uniquement</td></tr>
+    <tr><td>Internet</td><td>Non utilisée</td></tr>
+  </table>
+
+  <section class="qr">
+    <h2>Envoyer l'application à un ami</h2>
+    <img src="qr-code.png" alt="QR code menant à cette page de téléchargement">
+    <p>Faites scanner ce QR code, ou copiez le lien ci-dessous.<br>Il ouvre cette page, d'où l'application se télécharge en un geste.</p>
+    <div class="lien-copie">
+      <input id="lien" type="text" readonly value="https://adjaho-samson.github.io/Pylive/" aria-label="Lien de la page de téléchargement">
+      <button type="button" id="copier">Copier le lien</button>
+    </div>
+    <p class="statut-copie" id="statut" role="status" aria-live="polite"></p>
+  </section>
+
+  <h2>Questions fréquentes</h2>
+
+  <h3 style="font-size:19px;margin:22px 0 6px;">L'installation est bloquée par Android</h3>
+  <p style="margin:0;">C'est la protection normale pour une application hors Play Store. Dans les paramètres
+  proposés par le message, activez l'autorisation pour le navigateur ou le gestionnaire de fichiers,
+  puis relancez l'installation.</p>
+
+  <h3 style="font-size:19px;margin:22px 0 6px;">Aucune musique n'apparaît</h3>
+  <p style="margin:0;">Au premier lancement, l'application demande l'accès aux fichiers audio :
+  acceptez cette autorisation. Si des morceaux sont stockés sur une carte mémoire, vérifiez qu'elle est
+  bien insérée, puis utilisez « Actualiser » dans la bibliothèque.</p>
+
+  <h3 style="font-size:19px;margin:22px 0 6px;">L'application peut-elle être installée à côté d'un autre lecteur ?</h3>
+  <p style="margin:0;">Oui. Elle porte son propre identifiant et ses propres données : elle cohabite avec
+  n'importe quelle autre application musicale, y compris Tchatz Music, sans aucun conflit.</p>
+</main>
+
+<footer>
+  Pylive Music · Application gratuite et hors ligne<br>
+  <a href="https://github.com/Adjaho-Samson/Pylive">Code source et historique des versions</a>
+</footer>
+
+<script>
+  (function () {
+    var bouton = document.getElementById('copier');
+    var champ = document.getElementById('lien');
+    var statut = document.getElementById('statut');
+    if (!bouton || !champ) return;
+
+    function confirmer() {
+      statut.textContent = 'Lien copié. Vous pouvez le coller dans un message.';
+      window.setTimeout(function () { statut.textContent = ''; }, 4000);
+    }
+
+    bouton.addEventListener('click', function () {
+      var lien = champ.value;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(lien).then(confirmer, function () {
+          champ.select();
+          document.execCommand('copy');
+          confirmer();
+        });
+      } else {
+        champ.select();
+        document.execCommand('copy');
+        confirmer();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>

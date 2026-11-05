@@ -76,6 +76,9 @@ jobs:
             --title "Build Pylive Music #${{ github.run_number }} : échec" \
             --body-file rapport-erreurs.md || cat rapport-erreurs.md
 
+      - name: Préparer l'APK à distribuer
+        run: cp app/build/outputs/apk/debug/app-debug.apk pylive-music.apk
+
       - name: Artifact APK
         uses: actions/upload-artifact@v4
         with:
@@ -105,9 +108,9 @@ jobs:
           body: |
             APK debug signé pour l'installation directe sur Android 8.0 (API 26) et supérieur.
 
-            `app-debug.apk` est le fichier à installer sur le téléphone.
+            `pylive-music.apk` est le fichier à installer sur le téléphone.
             Aucune permission Internet, aucun compte, aucune publicité.
-          files: app/build/outputs/apk/debug/app-debug.apk
+          files: pylive-music.apk
           fail_on_unmatched_files: true
 
   device-tests:
