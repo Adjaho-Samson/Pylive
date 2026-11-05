@@ -1,8 +1,9 @@
 name: Pylive Music APK
 
 on:
+  # Toutes les branches : un build est produit dès qu'un commit arrive, ce qui
+  # permet aussi de compiler une branche de travail avant fusion.
   push:
-    branches: [main, master]
   pull_request:
   workflow_dispatch:
 
