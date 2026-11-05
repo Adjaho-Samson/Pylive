@@ -12,28 +12,37 @@ lecteur, cohabitation possible avec Tchatz Music sur le même téléphone.
 
 ---
 
-## 1. Obtenir l'APK sans Android Studio
+## 1. Obtenir l'APK
 
-1. Ouvrir l'onglet **Actions** du dépôt GitHub.
-2. Choisir le workflow **Pylive Music APK** (il se lance à chaque `push` ; le bouton
-   **Run workflow** permet aussi de le relancer à la demande).
-3. Ouvrir la dernière exécution réussie du job **Tests, analyse et APK**.
-4. Télécharger l'artefact **Pylive-Music-debug-APK**, puis extraire `app-debug.apk`.
-5. Sur le téléphone, ouvrir le fichier et autoriser temporairement
+### Lien à partager
+
+| Usage | Adresse |
+| --- | --- |
+| Page de téléchargement (à envoyer à un ami) | <https://adjaho-samson.github.io/Pylive/> |
+| Téléchargement direct de l'APK | <https://github.com/Adjaho-Samson/Pylive/releases/latest/download/pylive-music.apk> |
+
+La page de téléchargement présente l'application, les étapes d'installation, un
+**QR code** et un bouton « Copier le lien » : c'est l'adresse à envoyer par
+message. Elle est générée depuis `docs/site/` et publiée automatiquement par le
+workflow `pages.yml`.
+
+### Depuis GitHub
+
+1. Ouvrir l'onglet **Releases** du dépôt et choisir la version la plus récente :
+   le fichier `pylive-music.apk` s'y télécharge en un appui.
+2. À défaut, l'onglet **Actions** conserve le même APK dans l'artefact
+   **Pylive-Music-debug-APK** de la dernière exécution réussie
+   (c'est une archive ZIP : l'extraire avant de l'installer).
+3. Sur le téléphone, ouvrir le fichier et autoriser temporairement
    **Installer des applications inconnues** pour l'application source.
-
-L'APK est aussi publié automatiquement dans **Releases** sous le nom
-`pylive-music-debug.apk` à chaque exécution sur `main`.
-
-> L'artefact téléchargé est une archive ZIP : il faut l'extraire avant de l'installer.
-> Ne pas essayer d'installer le ZIP.
 
 ### Installer sur le téléphone
 
-Transférer `app-debug.apk` par câble USB, Drive, ou le télécharger directement.
-L'installateur Android demande la confirmation d'installation. Play Protect peut
-analyser un APK de debug non publié sur le Play Store : n'installer que vos propres
-builds ou une source de confiance.
+Transférer `pylive-music.apk` par câble USB, par messagerie, ou le télécharger
+directement depuis le lien ci-dessus. L'installateur Android demande la
+confirmation d'installation. Play Protect peut analyser un APK de debug non
+publié sur le Play Store : n'installer que vos propres builds ou une source de
+confiance.
 
 Au premier lancement :
 
@@ -43,8 +52,6 @@ Au premier lancement :
 3. Sélectionner un morceau, ou appuyer sur **Tout écouter** / **Aléatoire**.
 4. En cas de refus, le bandeau reste visible : bouton **Réglages Android** pour rétablir
    l'autorisation, ou **Choisir un dossier** pour un accès limité à un dossier précis.
-
----
 
 ## 2. Compiler soi-même
 
