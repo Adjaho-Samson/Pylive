@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   # Permet de renvoyer les erreurs de compilation directement dans le journal
   # consultable (les artefacts ne sont pas toujours accessibles depuis un mobile).
   issues: write
@@ -99,14 +99,16 @@ jobs:
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v1.0.${{ github.run_number }}
+          # Un APK par build : le tag suit le numéro d'exécution.
+          tag_name: apk-${{ github.run_number }}
           name: Pylive Music 1.0.${{ github.run_number }}
           body: |
             APK debug signé pour l'installation directe sur Android 8.0 (API 26) et supérieur.
 
-            `pylive-music-debug.apk` est le fichier à installer sur le téléphone.
+            `app-debug.apk` est le fichier à installer sur le téléphone.
             Aucune permission Internet, aucun compte, aucune publicité.
           files: app/build/outputs/apk/debug/app-debug.apk
+          fail_on_unmatched_files: true
 
   device-tests:
     name: Tests instrumentés (émulateur)
