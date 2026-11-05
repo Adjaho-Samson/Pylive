@@ -34,7 +34,11 @@ android {
 
     kotlinOptions { jvmTarget = "17" }
 
-    buildFeatures { compose = true }
+    buildFeatures {
+        compose = true
+        // Version affichée dans les réglages.
+        buildConfig = true
+    }
 
     androidResources {
         // L'application est en français ; aucune autre traduction n'est livrée.
