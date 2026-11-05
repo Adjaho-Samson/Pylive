@@ -1,10 +1,11 @@
 name: Page de téléchargement
 
 # Publie docs/site sur GitHub Pages à chaque évolution de la page.
-# Sur une branche de travail, la publication échoue tant que Pages n'est pas
-# activé sur main : le job est donc informatif hors de main.
+# Limité à main : sur une branche de travail, la publication échoue tant que
+# Pages n'est pas activé par le propriétaire du dépôt.
 on:
   push:
+    branches: [main]
     paths:
       - "docs/site/**"
       - ".github/workflows/pages.yml"
