@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pylive Music</string>
+
+    <!-- Autorisations et accueil -->
+    <string name="permission_title">Votre musique, automatiquement</string>
+    <string name="permission_body">Autorisez l’accès aux fichiers audio pour afficher la musique enregistrée sur ce téléphone. Aucun envoi, aucun compte, aucune connexion Internet.</string>
+    <string name="permission_action">Autoriser l’accès</string>
+    <string name="permission_denied_title">Accès audio refusé</string>
+    <string name="permission_denied_body">Sans cette autorisation, la bibliothèque reste vide. Vous pouvez l’accorder dans les réglages Android, ou choisir un dossier précis.</string>
+    <string name="permission_settings">Réglages Android</string>
+    <string name="permission_folder">Choisir un dossier</string>
+    <string name="permission_folder_granted">Dossier sélectionné : %1$s</string>
+    <string name="permission_folder_error">Impossible de conserver l’accès à ce dossier.</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Accueil</string>
+    <string name="nav_library">Bibliothèque</string>
+    <string name="nav_favorites">Favoris</string>
+    <string name="nav_playlists">Playlists</string>
+    <string name="nav_player">Lecteur</string>
+    <string name="nav_settings">Réglages</string>
+    <string name="nav_queue">File d’attente</string>
+    <string name="nav_history">Historique</string>
+    <string name="back">Retour</string>
+
+    <!-- Accueil -->
+    <string name="home_eyebrow">VOTRE ESPACE SONORE</string>
+    <string name="home_headline">La musique\nde votre téléphone.</string>
+    <string name="home_count">%1$d titres • 100 %% local</string>
+    <string name="home_count_singular">1 titre • 100 %% local</string>
+    <string name="home_empty_count">Aucun titre détecté pour l’instant</string>
+    <string name="home_now_playing">À l’écoute</string>
+    <string name="home_recent">Dernières écoutes</string>
+    <string name="home_added">Récemment ajoutés</string>
+    <string name="home_favorites">Vos favoris</string>
+    <string name="home_playlists">Vos playlists</string>
+    <string name="home_open_library">Ouvrir la bibliothèque</string>
+    <string name="home_open_player">Ouvrir le lecteur</string>
+    <string name="home_shortcut_history">Historique</string>
+
+    <!-- Bibliothèque -->
+    <string name="library_title">Bibliothèque</string>
+    <string name="library_count">%1$d morceaux</string>
+    <string name="library_count_singular">1 morceau</string>
+    <string name="library_search_label">Titre, artiste, album, fichier…</string>
+    <string name="library_search_clear">Effacer la recherche</string>
+    <string name="library_sort">Trier : %1$s</string>
+    <string name="library_sort_title">Titre</string>
+    <string name="library_sort_artist">Artiste</string>
+    <string name="library_sort_album">Album</string>
+    <string name="library_sort_duration">Durée</string>
+    <string name="library_sort_added">Date d’ajout</string>
+    <string name="library_play_all">Tout écouter</string>
+    <string name="library_shuffle_all">Aléatoire</string>
+    <string name="library_compact_on">Pochettes</string>
+    <string name="library_compact_off">Liste compacte</string>
+    <string name="library_refresh">Actualiser la bibliothèque</string>
+    <string name="library_no_result_title">Aucun résultat</string>
+    <string name="library_no_result_body">Aucun morceau ne correspond à « %1$s ». Essayez un autre titre, artiste ou album.</string>
+    <string name="library_empty_title">Aucun morceau détecté</string>
+    <string name="library_empty_body">Ajoutez des fichiers audio sur le téléphone, autorisez l’accès puis actualisez. Les fichiers privés des applications de streaming ne sont pas accessibles.</string>
+
+    <!-- Morceaux -->
+    <string name="track_unknown_artist">Artiste inconnu</string>
+    <string name="track_unknown_album">Album inconnu</string>
+    <string name="track_duration_artist">%1$s • %2$s</string>
+    <string name="track_options">Options du morceau</string>
+    <string name="track_favorite">Favori</string>
+    <string name="track_unfavorite">Retirer des favoris</string>
+    <string name="track_enqueue">Ajouter à la file d’attente</string>
+    <string name="track_to_playlist">Ajouter à une playlist</string>
+    <string name="track_details">Détails du morceau</string>
+    <string name="track_details_album">Album</string>
+    <string name="track_details_file">Fichier</string>
+    <string name="track_details_size">Taille</string>
+    <string name="track_details_added">Ajouté le</string>
+    <string name="track_details_path">Référence</string>
+    <string name="track_details_close">Fermer</string>
+    <string name="track_cover">Pochette de %1$s</string>
+
+    <!-- Paramètres -->
+    <string name="settings_title">Réglages</string>
+    <string name="settings_display">Affichage</string>
+    <string name="settings_compact">Liste compacte</string>
+    <string name="settings_compact_hint">Affiche plus de titres à l’écran, sans pochettes.</string>
+    <string name="settings_sort">Tri de la bibliothèque</string>
+    <string name="settings_library">Bibliothèque locale</string>
+    <string name="settings_refresh">Actualiser maintenant</string>
+    <string name="settings_ask_access">Demander l’accès audio</string>
+    <string name="settings_android_permissions">Autorisations Android</string>
+    <string name="settings_pick_folder">Choisir un dossier facultatif</string>
+    <string name="settings_forget_folder">Oublier le dossier facultatif</string>
+    <string name="settings_folder_none">Aucun dossier supplémentaire</string>
+    <string name="settings_privacy">Confidentialité</string>
+    <string name="settings_privacy_body">Aucun compte, aucune publicité, aucune télémétrie et aucune permission Internet. Favoris, playlists, historique et réglages restent sur cet appareil. Désinstaller l’application efface ces données, jamais vos fichiers audio.</string>
+    <string name="settings_help">Dépannage</string>
+    <string name="settings_help_body">Un titre manque ? Vérifiez l’autorisation audio et actualisez. Un fichier déplacé peut changer de référence : ajoutez la nouvelle entrée à vos playlists ; les anciennes références restent retirables. Un même fichier exposé deux fois (MediaStore et dossier) peut apparaître en double. Les formats MP3, M4A, AAC, FLAC, WAV, OGG et Opus dépendent du codec pris en charge par le téléphone.</string>
+    <string name="settings_about">À propos de Pylive Music</string>
+    <string name="settings_about_body">Version %1$s • Android natif, Kotlin et Media3\nSans compte, sans serveur, sans publicité.</string>
+
+    <!-- Lecteur -->
+    <string name="player_eyebrow">LECTURE LOCALE</string>
+    <string name="player_nothing_title">Prêt pour votre musique</string>
+    <string name="player_nothing_body">Choisissez un morceau dans la bibliothèque pour commencer l’écoute.</string>
+    <string name="player_play">Lecture</string>
+    <string name="player_pause">Pause</string>
+    <string name="player_next">Morceau suivant</string>
+    <string name="player_previous">Morceau précédent</string>
+    <string name="player_shuffle">Lecture aléatoire</string>
+    <string name="player_repeat">Répétition</string>
+    <string name="player_repeat_off">Répétition désactivée</string>
+    <string name="player_repeat_all">Répéter la file</string>
+    <string name="player_repeat_one">Répéter le morceau</string>
+    <string name="player_seek_back">Reculer de 10 secondes</string>
+    <string name="player_seek_forward">Avancer de 10 secondes</string>
+    <string name="player_queue_button">File • %1$d</string>
+    <string name="player_favorite_button">Favori</string>
+    <string name="player_position">%1$s / %2$s</string>
+    <string name="player_progress_label">Position dans le morceau</string>
+    <string name="player_album">Album : %1$s</string>
+
+    <!-- File d’attente -->
+    <string name="queue_title">File d’attente</string>
+    <string name="queue_count">%1$d morceaux</string>
+    <string name="queue_empty_title">La file est vide</string>
+    <string name="queue_empty_body">Lancez un morceau ou ajoutez des titres depuis leur menu.</string>
+    <string name="queue_move_up">Monter</string>
+    <string name="queue_move_down">Descendre</string>
+    <string name="queue_remove">Retirer de la file</string>
+    <string name="queue_now_playing">En cours de lecture</string>
+    <string name="queue_play">Lire ce morceau</string>
+
+    <!-- Favoris / historique -->
+    <string name="favorites_title">Favoris</string>
+    <string name="favorites_count">%1$d titres</string>
+    <string name="favorites_empty_title">Aucun favori</string>
+    <string name="favorites_empty_body">Appuyez sur le cœur d’un morceau pour le retrouver ici.</string>
+    <string name="history_title">Historique</string>
+    <string name="history_clear">Effacer l’historique</string>
+    <string name="history_clear_title">Effacer l’historique ?</string>
+    <string name="history_clear_body">Les fichiers audio ne seront pas supprimés. Seule la liste des dernières écoutes sera vidée.</string>
+    <string name="history_empty_title">Aucune écoute</string>
+    <string name="history_empty_body">Les morceaux écoutés apparaîtront ici, du plus récent au plus ancien.</string>
+
+    <!-- Playlists -->
+    <string name="playlists_title">Playlists</string>
+    <string name="playlists_new">Nouvelle playlist</string>
+    <string name="playlists_rename">Renommer</string>
+    <string name="playlists_delete">Supprimer</string>
+    <string name="playlists_open">Ouvrir</string>
+    <string name="playlists_empty_title">Votre première sélection</string>
+    <string name="playlists_empty_body">Créez une playlist, puis utilisez le menu d’un morceau pour l’y ajouter.</string>
+    <string name="playlists_empty_short">Aucune playlist pour l’instant.</string>
+    <string name="playlist_create_title">Créer une playlist</string>
+    <string name="playlist_rename_title">Renommer la playlist</string>
+    <string name="playlist_name_label">Nom de la playlist</string>
+    <string name="playlist_save">Enregistrer</string>
+    <string name="playlist_cancel">Annuler</string>
+    <string name="playlist_delete_title">Supprimer « %1$s » ?</string>
+    <string name="playlist_delete_body">Les fichiers audio ne seront pas supprimés. La liste sera définitivement effacée.</string>
+    <string name="playlist_delete_confirm">Supprimer</string>
+    <string name="playlist_play">Lire la playlist</string>
+    <string name="playlist_count">%1$d morceaux</string>
+    <string name="playlist_references">%1$d accessibles sur %2$d références</string>
+    <string name="playlist_add_track">Ajouter à une playlist</string>
+    <string name="playlist_add_none">Créez d’abord une playlist depuis l’onglet Playlists.</string>
+    <string name="playlist_added">Ajouté à « %1$s »</string>
+    <string name="playlist_pick_tracks">Choisir des morceaux dans la bibliothèque</string>
+    <string name="playlist_empty_tracks">Playlist vide. Ajoutez des titres depuis le menu d’un morceau.</string>
+    <string name="playlist_unavailable">Fichier indisponible</string>
+    <string name="playlist_remove">Retirer de la playlist</string>
+    <string name="playlist_close">Fermer</string>
+
+    <!-- Messages d’erreur et de lecture -->
+    <string name="error_library">Accès audio impossible. Vérifiez les autorisations ou le dossier sélectionné.</string>
+    <string name="error_folder_revoked">L’accès au dossier a été révoqué. Choisissez-le à nouveau.</string>
+    <string name="error_file_missing">Ce fichier a été déplacé, supprimé, ou son accès a été révoqué. La bibliothèque va être actualisée.</string>
+    <string name="error_file_inaccessible">Fichier inaccessible. Actualisez la bibliothèque.</string>
+    <string name="error_playback">Lecture impossible : fichier inaccessible ou codec non pris en charge (%1$s). Passez au morceau suivant ou retirez-le de la file.</string>
+    <string name="error_service">Connexion au service audio impossible.</string>
+    <string name="error_service_connecting">Le service audio se connecte. Réessayez dans un instant.</string>
+    <string name="notice_title">Information</string>
+    <string name="notice_ok">Compris</string>
+    <string name="notice_added_to_queue">« %1$s » ajouté à la file d’attente.</string>
+
+    <!-- Notification multimédia -->
+    <string name="notification_channel_name">Lecture Pylive Music</string>
+
+    <!-- Divers -->
+    <string name="loading">Chargement de la bibliothèque</string>
+    <string name="more">Plus d’options</string>
+    <string name="selected_state">Sélectionné</string>
+</resources>

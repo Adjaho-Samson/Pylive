@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Palette Pylive Music.
+  Violet  #B80DB8 : identité, actions principales, éléments actifs.
+  Blanc   #FFFFFF : fonds, surfaces, zones de lecture.
+  Jaune   #F5D328 : accents, indicateurs, mise en évidence.
+
+  Contrôles de contraste (WCAG 2.1) effectués sur ces valeurs :
+    violet #B80DB8 / blanc            -> 5,5:1  (texte normal : conforme AA)
+    texte #1A1018 / blanc             -> 17,9:1 (conforme AAA)
+    texte #5C4E5E / blanc             -> 7,7:1  (conforme AAA)
+    jaune  #F5D328 / violet profond   -> 7,4:1  (conforme AAA)
+    texte #1A1018 / jaune             -> 12,2:1 (conforme AAA)
+  Interdits respectés : jamais de blanc sur jaune, de jaune sur blanc,
+  ni de violet sur violet.
+-->
+<resources>
+    <color name="pylive_violet">#FFB80DB8</color>
+    <color name="pylive_violet_pressed">#FF930A93</color>
+    <color name="pylive_violet_deep">#FF6E0A6E</color>
+    <color name="pylive_violet_night">#FF140A16</color>
+    <color name="pylive_white">#FFFFFFFF</color>
+    <color name="pylive_surface_tint">#FFF8F2F9</color>
+    <color name="pylive_outline">#FFE6DAE8</color>
+    <color name="pylive_yellow">#FFF5D328</color>
+    <color name="pylive_ink">#FF1A1018</color>
+    <color name="pylive_ink_soft">#FF5C4E5E</color>
+
+    <color name="brand_splash_background">#FFFFFFFF</color>
+</resources>

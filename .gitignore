@@ -1,0 +1,15 @@
+# Copie de travail d'un ordinateur : jamais envoyée au dépôt.
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild
+.cxx
+*.hprof
+# Sorties de compilation et artefacts lourds
+/app/build/
+*.apk
+!docs/apk/README.md

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Pylive Music">
+  <title>Pylive Music</title>
+  <rect width="512" height="512" rx="120" fill="#FFB80DB8"/>
+  <path d="M173.1,382.78 L173.1,129.22 L260.88,129.22 A78.02,78.02 0 0 1 260.88,285.26 L173.1,285.26"
+        fill="none" stroke="#FFFFFFFF" stroke-width="53.64"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="260.88" cy="207.24" r="34.13" fill="#FFF5D328"/>
+</svg>
