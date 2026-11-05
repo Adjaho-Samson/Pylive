@@ -18,7 +18,6 @@ android {
         versionCode = 1
         versionName = "1.0.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        resourceConfigurations += listOf("fr")
     }
 
     buildTypes {
@@ -36,6 +35,11 @@ android {
     kotlinOptions { jvmTarget = "17" }
 
     buildFeatures { compose = true }
+
+    androidResources {
+        // L'application est en français ; aucune autre traduction n'est livrée.
+        localeFilters += listOf("fr")
+    }
 
     lint {
         abortOnError = true

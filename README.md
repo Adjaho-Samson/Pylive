@@ -260,7 +260,7 @@ schéma et le tester avec `MigrationTestHelper`.
 ## Ressources tierces
 
 - **Roboto** (Christian Robertson / Google) — SIL Open Font License 1.1, texte intégral
-  dans `app/src/main/res/font/OFL-Roboto.txt`.
+  dans `licenses/OFL-Roboto.txt`.
 - Les icônes du lanceur, de l'interface et de la notification sont dessinées pour ce
   projet ; aucune ressource Material n'est copiée dans le dépôt.
 - Bibliothèques AndroidX, Media3, Room, DataStore, Coil : Apache 2.0 (voir
