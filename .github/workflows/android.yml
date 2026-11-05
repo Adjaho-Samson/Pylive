@@ -9,6 +9,9 @@ on:
 
 permissions:
   contents: read
+  # Permet de renvoyer les erreurs de compilation directement dans le journal
+  # consultable (les artefacts ne sont pas toujours accessibles depuis un mobile).
+  issues: write
 
 concurrency:
   group: pylive-${{ github.ref }}
@@ -55,6 +58,23 @@ jobs:
             :app:testDebugUnitTest \
             :app:lintDebug \
             :app:assembleDebug 2>&1 | tee gradle-build.log
+
+      - name: Publier les erreurs de compilation
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -o pipefail
+          {
+            echo "### Erreurs de compilation Pylive Music"
+            echo ""
+            echo '```'
+            grep -E "^(e|w): |error:|FAILURE:|What went wrong|Caused by:|> Task .* FAILED" -A 3 gradle-build.log 2>/dev/null | head -200
+            echo '```'
+          } > rapport-erreurs.md
+          gh issue create \
+            --title "Build Pylive Music #${{ github.run_number }} : échec" \
+            --body-file rapport-erreurs.md || cat rapport-erreurs.md
 
       - name: Artifact APK
         uses: actions/upload-artifact@v4
