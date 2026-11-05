@@ -16,15 +16,28 @@ lecteur, cohabitation possible avec Tchatz Music sur le même téléphone.
 
 ### Lien à partager
 
-| Usage | Adresse |
-| --- | --- |
-| Page de téléchargement (à envoyer à un ami) | <https://adjaho-samson.github.io/Pylive/> |
-| Téléchargement direct de l'APK | <https://github.com/Adjaho-Samson/Pylive/releases/latest/download/pylive-music.apk> |
+**Le lien qui fonctionne dès maintenant** — il lance directement le téléchargement
+de l'APK, sans page intermédiaire :
 
-La page de téléchargement présente l'application, les étapes d'installation, un
-**QR code** et un bouton « Copier le lien » : c'est l'adresse à envoyer par
-message. Elle est générée depuis `docs/site/` et publiée automatiquement par le
-workflow `pages.yml`.
+```
+https://github.com/Adjaho-Samson/Pylive/releases/latest/download/pylive-music.apk
+```
+
+Envoyez-le tel quel par message : le destinataire l'ouvre sur son téléphone, le
+fichier `pylive-music.apk` se télécharge, il n'y a plus qu'à toucher la
+notification puis **Installer**.
+
+### Page de téléchargement (optionnelle)
+
+Une page web prête à l'emploi se trouve dans `docs/site/` : présentation,
+étapes d'installation, FAQ, **QR code** (vérifié par décodage) et bouton
+« Copier le lien ». Le workflow `pages.yml` la publie sur GitHub Pages.
+
+> **Activation unique nécessaire** : GitHub Pages demande une autorisation que
+> seul le propriétaire du dépôt peut donner. Dans **Settings → Pages →
+> Build and deployment → Source**, choisir **GitHub Actions**. La page est
+> ensuite disponible à l'adresse <https://adjaho-samson.github.io/Pylive/> et se
+> met à jour à chaque modification de `docs/site/`.
 
 ### Depuis GitHub
 
