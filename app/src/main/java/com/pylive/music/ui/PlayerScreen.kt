@@ -15,6 +15,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -310,11 +313,11 @@ fun QueueScreen(
     onOpenLibrary: () -> Unit
 ) {
     val queue = state.player.queue
-    androidx.compose.foundation.lazy.LazyColumn(
+    LazyColumn(
         Modifier
             .fillMaxSize()
             .background(PylivePalette.White),
-        contentPadding = androidx.compose.foundation.layout.PaddingValues(
+        contentPadding = PaddingValues(
             start = 18.dp, end = 18.dp, top = 8.dp, bottom = 28.dp
         )
     ) {
@@ -345,7 +348,7 @@ fun QueueScreen(
                 )
             }
         }
-        androidx.compose.foundation.lazy.itemsIndexed(queue, key = { index, item -> "$index:${item.uri}" }) { index, entry ->
+        itemsIndexed(queue, key = { index, item -> "$index:${item.uri}" }) { index, entry ->
             val current = index == state.player.index
             Row(
                 Modifier
@@ -367,7 +370,7 @@ fun QueueScreen(
                     Modifier
                         .weight(1f)
                         .clip(RoundedCornerShape(10.dp))
-                        .androidxClickable { onJump(index) }
+                        .clickable { onJump(index) }
                         .padding(vertical = 6.dp, horizontal = 4.dp)
                 ) {
                     Text(
@@ -415,7 +418,3 @@ fun QueueScreen(
         }
     }
 }
-
-/** Petit raccourci lisible pour `Modifier.clickable` dans ce fichier. */
-private fun Modifier.androidxClickable(onClick: () -> Unit): Modifier =
-    this.then(androidx.compose.foundation.clickable(onClick = onClick))

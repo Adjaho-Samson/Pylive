@@ -355,7 +355,7 @@ fun PlaylistDetailScreen(
                     Column(
                         Modifier
                             .weight(1f)
-                            .androidxClickableTrack { onPlay(tracks, tracks.indexOf(track)) }
+                            .clickable { onPlay(tracks, tracks.indexOf(track)) }
                     ) {
                         Text(
                             track.title,
@@ -424,6 +424,3 @@ fun PlaylistDetailScreen(
         }
     }
 }
-
-private fun Modifier.androidxClickableTrack(onClick: () -> Unit): Modifier =
-    this.then(androidx.compose.foundation.clickable(onClick = onClick))

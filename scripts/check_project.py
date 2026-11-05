@@ -165,7 +165,35 @@ theme = (APP / "java/com/pylive/music/ui/theme/Theme.kt").read_text(encoding="ut
 check("onSecondaryContainer = PylivePalette.Ink" in theme,
       "le conteneur jaune doit imposer un texte foncé")
 
-# 12. Fonctionnalités annoncées réellement présentes -------------------------
+# 12. Pièges Kotlin : extensions Compose appelées avec leur nom complet ------
+# `androidx.compose.foundation.clickable(…)` ne compile pas : une fonction
+# d'extension doit être importée puis appelée sur son récepteur.
+extension_pattern = re.compile(
+    r"(?<![\w.])androidx\.compose\.(?:foundation|ui)\."
+    r"(?:clickable|background|border|padding|fillMaxWidth|fillMaxSize|height|width|size|"
+    r"weight|offset|clip|alpha|rotate|aspectRatio|widthIn|testTag)\s*\("
+)
+for kt in sources:
+    text = kt.read_text(encoding="utf-8")
+    check(not extension_pattern.search(text),
+          f"extension Compose appelée avec son nom complet dans {kt.name} (import requis)")
+
+# 13. Les fichiers UI qui utilisent `by remember` importent getValue/setValue --
+for kt in sources:
+    text = kt.read_text(encoding="utf-8")
+    if re.search(r"\bby remember", text):
+        check("import androidx.compose.runtime.getValue" in text,
+              f"getValue manquant pour `by remember` dans {kt.name}")
+        check("import androidx.compose.runtime.setValue" in text,
+              f"setValue manquant pour `var … by remember` dans {kt.name}")
+
+# 14. BuildConfig doit être activé si le code l'utilise -----------------------
+for kt in sources:
+    if "BuildConfig." in kt.read_text(encoding="utf-8"):
+        check("buildConfig = true" in gradle, "buildConfig non activé alors que BuildConfig est utilisé")
+        break
+
+# 15. Fonctionnalités annoncées réellement présentes -------------------------
 expected_files = [
     "java/com/pylive/music/library/LocalLibrary.kt",
     "java/com/pylive/music/playback/PlaybackConnection.kt",
